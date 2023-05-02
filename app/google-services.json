@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "199711872901",
+    "firebase_url": "https://sednaproject-a93df-default-rtdb.firebaseio.com",
+    "project_id": "sednaproject-a93df",
+    "storage_bucket": "sednaproject-a93df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199711872901:android:ba93fc8a693550186b56ec",
+        "android_client_info": {
+          "package_name": "com.example.bookingtable"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199711872901-gakbq03g5fj2s86fsjj93tbrj6n9b146.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDT3k7UnPf0xizv8iI0LVnxTxCgc3CWB6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199711872901-gakbq03g5fj2s86fsjj93tbrj6n9b146.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
