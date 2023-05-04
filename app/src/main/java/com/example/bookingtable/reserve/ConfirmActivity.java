@@ -1,6 +1,7 @@
 package com.example.bookingtable.reserve;
 
 import static com.example.bookingtable.login.Login.loginId;
+import static com.example.bookingtable.login.Login.userId;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -16,6 +17,7 @@ import androidx.appcompat.app.AlertDialog;
 import com.example.bookingtable.R;
 import com.example.bookingtable.db.UserDTO;
 import com.example.bookingtable.login.MainActivity;
+import com.example.bookingtable.login.Users;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -106,6 +108,18 @@ public class ConfirmActivity extends Activity {
                         databaseReference.child(loginId).child("startMinute").setValue(s.getStartMinute());
                         databaseReference.child(loginId).child("seat").setValue(s.getSeat());
                         databaseReference.child(loginId).child("zone").setValue(s.getZone());
+
+                        databaseReference = firebaseDatabase.getReference("Users");
+
+                        Users u = new Users(year, month, day, startHour, startMinute, seat, zone);
+                        databaseReference.child(userId).child("year").setValue(u.getYear());
+                        databaseReference.child(userId).child("month").setValue(u.getMonth());
+                        databaseReference.child(userId).child("day").setValue(u.getDay());
+                        databaseReference.child(userId).child("startHour").setValue(u.getStartHour());
+                        databaseReference.child(userId).child("startMinute").setValue(u.getStartMinute());
+                        databaseReference.child(userId).child("seat").setValue(u.getSeat());
+                        databaseReference.child(userId).child("zone").setValue(u.getZone());
+
 
                     }
                 });
