@@ -2,10 +2,10 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="6dp"
-    android:elevation="6dp"
+    app:cardElevation="6dp"
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/zonetext"
             android:text="Zone"
+            android:textStyle="bold"
             android:textSize="25sp"
             android:textColor="#000"
             android:layout_toRightOf="@+id/imgl"
@@ -55,15 +56,15 @@
                 android:layout_height="wrap_content"
                 android:text="UPDATE"
                 android:textAllCaps="false"
-                android:backgroundTint="@color/purple_500"
+                android:backgroundTint="@color/green"
                 android:layout_marginRight="5dp"
                 android:id="@+id/btnEdit"/>
 
             <Button
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
-                android:text="Back to My Table"
-                android:backgroundTint="@color/purple_500"
+                android:text="My Table"
+                android:backgroundTint="@color/green"
                 android:textAllCaps="false"
                 android:layout_marginRight="5dp"
                 android:id="@+id/btnTable"/>

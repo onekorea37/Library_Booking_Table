@@ -200,9 +200,9 @@ public class Login extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()){
                     id.setError(null);
-                    String passwordFromFB = snapshot.child(userUserId).child("password").getValue(String.class);
+                    String passwordFromFB = snapshot.child(userUserId).child("pw").getValue(String.class);
 
-                    if(!Objects.equals(passwordFromFB, userPassword)){
+                    if(Objects.requireNonNull(passwordFromFB).equals(userPassword)){
                         id.setError(null);
                         loginStatus = true;
                         loginId = userUserId;
