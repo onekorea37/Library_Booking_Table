@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="51dp"
-        android:background="#F6BB43"
+        android:background="@color/green"
         android:gravity="center"
-        android:text="레스토랑 방문일과 시간 선택"
+        android:text="예약일 및 시간 선택"
         android:textColor="#ffffff"
         android:textSize="20dp" />
 
@@ -17,7 +19,7 @@
         android:layout_height="68dp"
         android:gravity="center"
         android:text="예약할 날짜와 시간을 고르고 확인 버튼을 눌러주세요"
-        android:textColor="#F6BB43"
+        android:textColor="@color/green"
         android:textSize="17dp"
         android:textStyle="bold" />
 
@@ -51,10 +53,9 @@
             <DatePicker
                 android:datePickerMode="calendar"
                 android:id="@+id/datePicker1"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center" />
-
             <TimePicker
                 android:timePickerMode="spinner"
                 android:id="@+id/timePicker1"
@@ -75,72 +76,72 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#F6BB43"
+        android:background="@color/green_50"
         android:gravity="center" >
 
         <TextView
             android:id="@+id/tvYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="0000" />
+            android:textSize="20sp"
+            android:text="2023" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="년" />
+            android:textSize="20sp"
+            android:text="년 " />
 
         <TextView
             android:id="@+id/tvMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="00" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="월" />
+            android:textSize="20sp"
+            android:text="월 " />
 
         <TextView
             android:id="@+id/tvDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="00" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="일" />
+            android:textSize="20sp"
+            android:text="일 " />
 
         <TextView
             android:id="@+id/tvHour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="00" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="시" />
+            android:textSize="20sp"
+            android:text="시 " />
 
         <TextView
             android:id="@+id/tvMinute"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="00" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="분 예약됨" />
 
     </LinearLayout>
