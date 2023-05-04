@@ -14,10 +14,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 
 import com.example.bookingtable.R;
-import com.example.bookingtable.db.SeatDTO;
 import com.example.bookingtable.db.UserDTO;
 import com.example.bookingtable.login.MainActivity;
-import com.example.bookingtable.statue.MainAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 

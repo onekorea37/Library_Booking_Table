@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.example.bookingtable.reserve.DayTimeActivity;
 import com.example.bookingtable.R;
 import com.example.bookingtable.reserve.ZoneActivity;
+import com.example.bookingtable.statue.GoogleActivity;
 import com.example.bookingtable.statue.StatueActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     static Button main_login_button;
     static Button main_reserve_button;
     static Button main_statue_button;
+    static Button main_statue_button2;
     Intent intent;
 
     //  @SuppressLint("SetTextI18n")
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         main_login_button = findViewById(R.id.mainLoginButton);
         main_statue_button = findViewById(R.id.mainStatueButton);
         main_reserve_button = findViewById(R.id.mainReserveButton);
+        main_statue_button2 = findViewById(R.id.mainStatueButton2);
 
         if(loginStatus){
             main_login_button.setText("LOGOUT");
@@ -65,6 +68,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        main_statue_button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, GoogleActivity.class);
+                startActivity(intent);
+            }
+        });
+
         main_reserve_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
     }
 

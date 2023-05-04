@@ -75,6 +75,15 @@
                 android:backgroundTint="@color/green"
                 app:cornerRadius = "200dp"/>
 
+
+            <ImageView
+                android:id="@+id/google"
+                android:layout_width="215dp"
+                android:layout_height="55dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:src="@drawable/google" />
+
         </LinearLayout>
 
 
