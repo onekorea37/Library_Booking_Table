@@ -10,7 +10,7 @@
         android:layout_height="51dp"
         android:background="@color/green"
         android:gravity="center"
-        android:text="예약일 및 시간 선택"
+        android:text="Set Date / Time "
         android:textColor="#ffffff"
         android:textSize="20dp" />
 
@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="68dp"
         android:gravity="center"
-        android:text="예약할 날짜와 시간을 고르고 확인 버튼을 눌러주세요"
+        android:text="Choose the date and time that you want"
         android:textColor="@color/green"
         android:textSize="17dp"
         android:textStyle="bold" />
@@ -31,13 +31,13 @@
             android:id="@+id/rdoCal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="날짜 설정" />
+            android:text="Date" />
 
         <RadioButton
             android:id="@+id/rdoTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="시간 설정" />
+            android:text="Time" />
     </RadioGroup>
 
     <LinearLayout
@@ -69,7 +69,7 @@
         android:id="@+id/BtnDayOk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="확인"
+        android:text="SELECT"
         android:layout_gravity="center_horizontal"/>
 
 
@@ -79,44 +79,51 @@
         android:background="@color/green_50"
         android:gravity="center" >
 
-        <TextView
-            android:id="@+id/tvYear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="2023" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="년 " />
+            android:text="Date " />
+
+        <TextView
+            android:id="@+id/tvYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="2023y" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="-" />
 
         <TextView
             android:id="@+id/tvMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="00" />
+            android:text="00m" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="월 " />
+            android:text="-" />
 
         <TextView
             android:id="@+id/tvDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="00" />
+            android:text="00d" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="일 " />
+            android:text=" Time " />
 
         <TextView
             android:id="@+id/tvHour"
@@ -129,7 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="시 " />
+            android:text="h-" />
 
         <TextView
             android:id="@+id/tvMinute"
@@ -138,11 +145,6 @@
             android:textSize="20sp"
             android:text="00" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="분 예약됨" />
 
     </LinearLayout>
 
@@ -150,7 +152,7 @@
         android:id="@+id/BtnToTable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="다음 단계로"
+        android:text="NEXT"
         android:layout_gravity="center_horizontal"/>
 
 

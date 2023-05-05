@@ -47,7 +47,7 @@ public class TableActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
-        setTitle("레스토랑 자리 예약");
+        setTitle("Book a Table");
 
         //이전 day time 변수들
         tvYear2 = (TextView) findViewById(R.id.tvYear2);
@@ -97,12 +97,12 @@ public class TableActivity extends Activity {
 
                 //alertDialog.Builder 생성
                 AlertDialog.Builder dlg = new AlertDialog.Builder(TableActivity.this);
-                dlg.setTitle("예약자 정보 입력");
+                dlg.setTitle("INPUT INFORMATION");
                 dlg.setIcon(R.drawable.ic_menu_allfriends);
                 dlg.setView(dialogView); //인플레이트한 것을 대화상자로 사용
 
                 //setPositiveButton
-                dlg.setPositiveButton("확인",
+                dlg.setPositiveButton("CHECK",
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -112,17 +112,17 @@ public class TableActivity extends Activity {
                                 tvName.setText(dlgEdtName.getText().toString());
                                 tvPhone.setText(dlgEdtPhone.getText().toString());
 
-                                Toast.makeText(getApplicationContext(),"예약자 정보 확인했습니다.",
+                                Toast.makeText(getApplicationContext(),"INFORMATION CHECKED.",
                                         Toast.LENGTH_SHORT).show();
                             }
                         });
 
                 //
-                dlg.setNegativeButton("취소",
+                dlg.setNegativeButton("CANCEL",
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(getApplicationContext(),"취소했습니다.",
+                                Toast.makeText(getApplicationContext(),"CANCELLED",
                                         Toast.LENGTH_SHORT).show();
                             }
                         });
@@ -138,20 +138,18 @@ public class TableActivity extends Activity {
                 public void onClick(View view){
                     //더 구현 : 클릭 시 색 바뀌는거
                     if (index<7){
-                        seat.setText((index+1)+"번 자리"); //버튼 번호를 받아와 띄움
-                        personnel.setText("2인");
+                        seat.setText((index+1)+"Table"); //버튼 번호를 받아와 띄움
                         seat.setTextColor(Color.BLUE);
-                        personnel.setTextColor(Color.BLUE);
                         Toast.makeText(getApplicationContext(),
-                                "2인"+(index+1)+"번 좌석을 선택하셨습니다.",Toast.LENGTH_SHORT).show();
+                                "Table" + +(index+1) + "you selected.",Toast.LENGTH_SHORT).show();
                     }
                     else{
-                        seat.setText((index+1)+"번 자리"); //버튼 번호를 받아와 띄움
+                        seat.setText("Table" + (index+1)); //버튼 번호를 받아와 띄움
                         newZone1.setText(((ZoneActivity)ZoneActivity.zoneContext).zone1.getText());
                         seat.setTextColor(Color.BLUE);
                         newZone1.setTextColor(Color.BLUE);
                         Toast.makeText(getApplicationContext(),
-                                "4인"+(index+1)+"번 좌석을 선택하셨습니다.",Toast.LENGTH_SHORT).show();
+                                "Table"+(index+1)+" You selected .",Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -166,21 +164,21 @@ public class TableActivity extends Activity {
                 if(seat.length() <= 0 || tvName.length() <= 0 || tvPhone.length() <= 0){ //좌석 정보 없으면 인원 정보도 없는 것
 
                     if(seat.length() <= 0){
-                        Toast.makeText(getApplicationContext(),"좌석을 선택하세요"
+                        Toast.makeText(getApplicationContext(),"SELECT TABLE"
                                 ,Toast.LENGTH_SHORT).show();
                     }
                     if(tvName.length() <= 0 && tvPhone.length() <= 0){
-                        Toast.makeText(getApplicationContext(),"예약자 정보를 입력하세요"
+                        Toast.makeText(getApplicationContext(),"INPUT YOUR INFORMATION"
                                 ,Toast.LENGTH_SHORT).show();
                     }
                     if(tvName.length() > 0 && tvPhone.length() <= 0){
                         Toast.makeText(getApplicationContext(),
-                                "예약자 '연락처'는 필수 정보입니다.\n 예약자 정보를 다시 입력해주세요"
+                                "Phone number is required.\n try again"
                                 ,Toast.LENGTH_SHORT).show();
                     }
                     if(tvName.length() <= 0 && tvPhone.length() > 0){
                         Toast.makeText(getApplicationContext(),
-                                "예약자 '성함'은 필수 정보입니다.\n 예약자 정보를 다시 입력해주세요"
+                                "Name is required.\n try again"
                                 ,Toast.LENGTH_SHORT).show();
                     }
 

@@ -36,7 +36,7 @@ public class ConfirmActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comfirm);
-        setTitle("레스토랑 자리 예약 확정");
+        setTitle("BOOKING CONFIRM");
 
         //예약 날 정보
         //이전 day time 변수들
@@ -80,13 +80,13 @@ public class ConfirmActivity extends Activity {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder dlg = new AlertDialog.Builder(ConfirmActivity.this);
-                dlg.setTitle("예약 확정");
+                dlg.setTitle("Reservation Confirm");
                 dlg.setIcon(R.drawable.btn_star_big_on);
-                dlg.setMessage("정말 예약을 확정하시겠습니까?");
-                dlg.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                dlg.setMessage("Do you want to confirm?");
+                dlg.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(),"예약 확정 되었습니다.",
+                        Toast.makeText(getApplicationContext(),"It's all set!.",
                                 Toast.LENGTH_SHORT).show();
 
                         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -123,10 +123,10 @@ public class ConfirmActivity extends Activity {
 
                     }
                 });
-                dlg.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                dlg.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(),"취소했습니다.",
+                        Toast.makeText(getApplicationContext(),"Cancelled.",
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
