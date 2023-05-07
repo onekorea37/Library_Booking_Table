@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    // 뒤로가기 방지1
+    // 뒤로가기 방지11
     public void onBackPressed() {  }
 
 }
