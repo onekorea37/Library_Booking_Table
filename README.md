@@ -10,7 +10,7 @@
 
 <h4><Strong>Created by</Strong>: Dowon, Chance Park</h4> 
 <h4><Strong>Language</Strong> : Java</h4>
-<h4><Strong>Period</Strong> : 2023-04~2023-05 (1 month) </h4> 
+<h4><Strong>Period</Strong> : 2023-04~2023-06 (2 months) </h4> 
 <h4><Strong>DB</Strong> : Firebase</h4> 
 <h4><Strong>Login</Strong> : Google API</h4>  <br>
 
